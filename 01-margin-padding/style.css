@@ -1,0 +1,35 @@
+body {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.one {
+  background: pink;
+  border: 3px solid blue;
+  /* CHANGE ME */
+  padding: 32px;
+  margin: 12px;
+}
+
+.two {
+  background: lightblue;
+  border: 3px solid purple;
+  /* CHANGE ME */
+  margin-bottom: 48px;
+}
+
+.three {
+  background: peachpuff;
+  border: 3px solid brown;
+  width: 200px;
+  /* CHANGE ME */
+  padding: 32px;
+  margin-left: 330px; 
+  /* since the body specify 600px as max, and box 
+  three has width of 270px (inspect using browser's devtool), 
+  then i should set left margin 600-270 = 330px as the left margin */
+
+  /* note solution is using 'auto' parameter for the margin-left (which will achieve the same result that i did. 
+      think this make more sense as we have specify the width as auto in <body> 
+      otherwise we have to find out the width manually*/
+}
