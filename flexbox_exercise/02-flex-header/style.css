@@ -1,0 +1,40 @@
+.header  {
+  font-family: monospace;
+  background: papayawhip;
+  display: flex;
+  justify-content: space-between; /*added to so that 1st box is flex-start, 2nd box is center and 3rd box is flex-end*/
+  align-items: center; /*added to center all three box along cross-axis*/
+  height: 100px; /*added so that there is some gap between logo border and the header box as per the desired outcome example*/
+}
+
+.logo {
+  font-size: 48px;
+  font-weight: 900;
+  color: tomato;
+  background: white;
+  padding: 4px 32px;
+}
+
+ul {
+  /* this removes the dots on the list items*/
+  list-style-type: none;
+  width: 300px; /* added to allow space out of flex items. otherwise the width is not enough for the item to give some space. */
+  display: flex; /* added so that the list item will become a flex items so that we can apply some spacing. */
+  justify-content: space-evenly; /* added so that the flex item is space out evenly */
+  align-items: center; /* added so that the item is center over the cross axis */
+  padding: 0px; /* added to remove padding*/
+
+  /* note that the container is actually smaller than the font size set in <a> flag */
+  /* this means that the flex-shrink wont work as the most it can shrink is up to the font size*/
+  /* similarly flex-grow wont work as the flex item is already bigger than the container following the fond size*/
+
+}
+  
+
+a {
+  font-size: 22px;
+  background: white;
+  padding: 8px; 
+  /* this removes the line under the links */
+  text-decoration: none;
+}
