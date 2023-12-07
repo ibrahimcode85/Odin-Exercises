@@ -1,0 +1,76 @@
+/* this is some magical font-importing.  
+you'll learn about it later. */
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,900&display=swap');
+
+body {
+  margin: 0;
+  background: #eee;
+  font-family: Besley, serif;
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex ; /* add to make a flex container*/
+  align-items: center; /* add to make the child item center on cross-axis of the header box*/
+  justify-content:space-between; /* add to split left box and right box to the edge. */
+}
+
+/* add left-box class to group logo and link together.*/
+.left-box { 
+  display: flex; /* add to make a container for left items*/
+  justify-content: center; /* add to make it center along main axis*/
+  align-items: center; /* add to make it center along cross axis*/
+  gap: 10px; /* add to make a space between flex item*/
+}
+
+/* add right-box class to group logo and link together.
+add the same parameter as the left-box*/
+.right-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-image {
+  background: rebeccapurple;
+  box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  margin-right: 8px;
+}
+
+.logo {
+  color: rebeccapurple;
+  font-size: 32px;
+  font-weight: 900;
+  font-style: italic;
+  margin-left: 8px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  background: rebeccapurple;
+  color: white;
+  padding: 8px 24px;
+}
+
+a {
+  /* this removes the line under our links */
+  text-decoration: none;
+  color: rebeccapurple;
+  flex: 1 1 0; /* add so that the content of the links will shrink if the windows shrink too much*/
+}
+
+ul {
+  list-style-type: none;
+  display: flex; /* add to make the link button a flex item within the list container */
+  align-items: center; /* add to make it center across main axis. */
+                       /* no need to do for cross-axis as the height is already the same with container */
+  gap: 10px; /* add spacing between links*/
+  padding-left: 8px;  /*add extra padding to the left of the links so that we have a bit more gap between logo and first link*/
+}
