@@ -1,0 +1,46 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.text {
+  text-align: center; /* added so that the text is center align and is wrap by the width. */
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 900;
+  display: flex; /*added to make a flex container so that we have two separate flexbox for title and content*/
+  justify-content: center; /* added to make the title center align*/
+  margin-bottom: 32px; /* added so that there's a 32px gap with the info box below*/
+}
+
+.info {
+  display: flex; /* added to make a container that contain another child container that contain info (see .content) */
+  justify-content: center; /* added to make it center align*/
+  gap: 52px; /* added to have some space between child container*/
+}
+
+.content {
+  display: flex; /* added to make a container that have image+text as flex item*/
+  flex-direction: column; /* added so that the flex item is arranged by column (i.e image top, text bottom)*/
+  align-items: center; /* added so that the flex item is center across cross-axis (i.e horizontal)*/
+  width: 200px; /* added to fix the width as required by instruction*/
+}
+
+/* do not edit this footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+}
