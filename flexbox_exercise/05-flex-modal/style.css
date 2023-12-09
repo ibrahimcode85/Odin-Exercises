@@ -13,6 +13,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 10px solid red;
 }
 
 .modal {
@@ -20,6 +21,8 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  border: 5px solid purple;
+  display: flex; /**/
 }
 
 .icon {
@@ -66,4 +69,20 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+
+.container {
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+}
+
+.child1 {
+  border: 1px solid green;
+  display: flex;
+  justify-content: space-between;
+}
+
+.child2, .child3 {
+  border: 1px solid green;
 }
