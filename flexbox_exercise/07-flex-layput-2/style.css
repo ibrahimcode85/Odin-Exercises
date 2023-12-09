@@ -5,6 +5,9 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+
+  /* added param below so that we can arrange header, footer and content section as flex item, and do space-between
+  so that footer is placed at flex-start, while footer on flex-end, while content at the center.*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -19,7 +22,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
-  padding: 10px;
+  padding: 10px; /* added padding as per self-check list.*/
 }
 
 input {
@@ -31,38 +34,36 @@ input {
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: flex; /* added to make the links as flex-item*/
+  justify-content: space-between; /* added so that left-links and right-links are placed at the far end of the container*/
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
+  display: flex; /* added so that the logo, input and buttons can be arranged as flex-items.*/
+  flex-direction: column; /* added to arrange the item as column stacking on top of each other.*/
+  align-items: center; /* added so that the items are ate the center of the content box.*/
+  gap: 5px; /* added so that there is some gap between the flex items*/
 }
 
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  background-color: #eee;
+  display: flex; /* added so that the links can be arranged as flex-items*/
+  justify-content: space-between; /* added so that the left-links and right-links can be placed at the far end.*/
+  background-color: #eee; /* added as per self-check list*/
 }
 
 ul {
-  list-style-type: none;
+  list-style-type: none; /* added to remove the list symbol.*/
 }
 
 a {
-  text-decoration: none;
-  color: grey;
+  text-decoration: none; /* added to remove the underline for the link.*/
+  color: grey; /* added so that the font color is grey.*/
 }
 
 .left-links , .right-links {
-  display: flex;
-  padding-left: 10px;
-  padding-right: 10px;
-  gap: 10px;
-  font-size: small;
+  display: flex; /*added so that the list can be arranged as flex item.*/
+  padding-left: 10px; /*added to have some space between the left-links and the left border*/
+  padding-right: 10px; /* added to have some space between the right-links and the right border.*/
+  gap: 10px; /* added to have some gap between the links*/
+  font-size: small; /* make the font for links to be a bit smaller. otherwise it seems too big relative to the overall layout.*/
 }
