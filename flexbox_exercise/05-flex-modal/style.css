@@ -20,8 +20,8 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
-  display: flex; /**/
-  padding: 10px; /**/
+  display: flex; /* added so that the modal is container flex container with icon and another container as flex items.*/
+  padding: 10px; /* added to give some spacing around the modal border*/
 }
 
 .icon {
@@ -35,8 +35,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0; /**/
-  margin-right: 10px; /**/
+  flex-shrink: 0; /* added so that the icon shrinks to follow the size of the container.*/
+  margin-right: 10px; /* added gap between icon and the text box*/
 }
 
 .close-button {
@@ -71,21 +71,21 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
-  font-size: 15px; /**/
+  font-size: 15px; /* added to make the font a bit bigger relative to the text above it. Otherwise it feels small.*/
 }
 
-.container {
+.container { /* add container to wrap the items next to icon - i.e the header, the close-button, the text and the continue/cancel buttons.*/
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: column; /*arrange as column so that header, text and buttons are arranged vertically.*/
+  gap: 10px;  /*added a bit of spacing between the items.*/
 }
 
-.child1 {
+.child1 { /*added container to wrap the header text and the close button.*/
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* added so that the items are arranged at far-left and far-right of the box.*/
 }
 
 .header {
-  font-weight: bold;
+  font-weight: bold; /* added to make the text bigger an bold.*/
   font-size: larger;
 }
