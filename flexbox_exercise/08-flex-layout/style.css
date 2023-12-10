@@ -2,27 +2,28 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: flex; /* set so that we can arrange header-content-footer as flex item*/
+  flex-direction: column; /* set so that we can arrange the flex item in one column - on top of each other*/
 }
 
 .header {
   height: 72px;
   background: #8b008b;
   color: white;
-  display: flex;
-  align-items: center;
+  display: flex; /* set so that its easier to align the content as flex item*/
+  align-items: center; /* make it center vertically*/
   font-size: 32px;
   font-weight: 900;
+  padding-left: 16px;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
-  display: flex;
-  justify-content: center;
-  align-items: center; /*stop side bar from shirnking*/ 
+  display: flex; /* set to make it easier to align the content as flex item*/
+  justify-content: center; /* align it to center horizontally*/
+  align-items: center; /* align it to center vertically*/ 
 }
 
 .sidebar {
@@ -33,11 +34,14 @@ body {
 }
 
 .card {
-  border: 1px solid red;
+  border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
-  padding: 32px;
-  flex: 1;
+  padding: 16px;
+  width: 300px; /* fixed the width of the flex item*/
+
+  /*my mistake is defining flex parameter here (i.e flex: 1). To make it the card dimension fixed, 
+  it should not be allowed to grow/shrink. Just use wrap in the container and it will re-arrange the cards.*/
 }
 
 .mid_section {
@@ -47,17 +51,18 @@ body {
 .card_content {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  border: 5px solid green;
-  padding: 10px;
+  gap: 16px;
+  padding: 32px;
+  /* my mistake - put width on the container instead of the flex item (silly mistake!).
+      Potentially do not use similar name 'card' or be careful with the name. */
 }
 
 ul {
   display: flex;
   flex-direction: column;
   list-style: none;
-  gap: 10px;
-  padding: 0;
+  gap: 16px;
+  padding-left: 16px;
 }
 
 a {
