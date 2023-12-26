@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add7(num) {
+            return num + 7;
+        }
+
+        function multiplied(num1, num2) {
+            return num1 * num2;
+        }
+
+        function capitalised(text) {
+            first_letter = text[0].toUpperCase();  //get the first letter and capitalised it
+            other_letter = text.substr(1);         //get the remainder of the letter
+            return first_letter + other_letter;    //return the combined string result
+        }
+
+        function lastLetter(text) {
+            nth_letter = text.length;
+            return text[nth_letter-1];
+        }
+        alert(add7(20));
+        alert(multiplied(5,2));
+        alert(capitalised("yes i can!!"));
+        alert(lastLetter("hello my friend."));
+
+    </script>
+
+
+</body>
+</html>
