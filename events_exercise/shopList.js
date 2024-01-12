@@ -28,6 +28,7 @@ function saveItem() {
     shopList.appendChild(listItem);
 
     shopInput.value = '';
+    shopInput.focus();
 };
 
 function listItemClickHandler(e) {
