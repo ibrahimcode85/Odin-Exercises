@@ -19,6 +19,7 @@
     background-color: #393f4d;
   }
   
+  
   .menu ul,
   .menu li {
     font-size: 16px;
@@ -47,6 +48,7 @@
   .nav {
     background-color: #C50208;
   }
+  
   
   .nav ul li {
     font-size: 16px;
@@ -89,72 +91,71 @@
     font-size: 13px;
     font-weight: normal;
   }
-
-  /*my solution*/
-  .container{
+  
+  /* SOLUTION */
+  
+  .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    /* grid-template-rows: 0.5fr 0.5fr 6fr 0.5fr; */
     gap: 4px;
   }
-
-  .header{
-    grid-column: span 2;
+  
+  .header {
+    grid-column: 1 / 3;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    align-items: center;
+    grid-template-columns: 1fr 2fr;
   }
-
-  .sidebar{
-    grid-row: span 2;
+  
+  .logo {
+    justify-self: start;
   }
-
-  .footer{
-    grid-column: span 2;
+  
+  .menu {
+    align-self: center;
+  }
+  
+  .menu ul {
     display: grid;
-    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-
-  ul{
-    list-style: none;
+  
+  .menu ul,
+  .menu li {
+    list-style-type: none;
   }
-
-.menu ul{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-  }
-
-.nav {
-    display: grid;
-    align-items: center;
-}
-
-.nav ul{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.sidebar{
+  
+  .sidebar {
+    grid-row: 2 / 4;
     display: grid;
     gap: 50px;
-}
-
-.side-content , .photo{
+  }
+  
+  .side-content,
+  .photo {
     display: grid;
-    align-content: center;
-}
-
-.article{
+    align-items: center;
+  }
+  
+  .nav ul {
+    list-style-type: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .article {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
-}
-
-.card{
+  }
+  
+  .article .card {
     height: 200px;
-}
-
-.logo{
-    justify-self: start;
-}
+  }
+  
+  .card p {
+    padding: 5px;
+  }
+  
+  .footer {
+    grid-column: 1 / 3;
+  }
